@@ -1,0 +1,200 @@
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    /* Borda arredondada para o container */
+    margin-top: 40px;
+}
+
+.logo img {
+    height: 40px;
+    /* Ajuste a altura conforme necessário */
+    margin-right: 20px;
+    cursor: pointer;
+    /* Espaço entre o logo e a barra de pesquisa */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    /* Cor de fundo da barra de pesquisa */
+    padding: 15px;
+    border-radius: 25px;
+    /* Borda arredondada para a barra de pesquisa */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra para destacar */
+    flex-grow: 1;
+    /* Faz com que a barra de pesquisa ocupe o espaço disponível */
+    max-width: 600px;
+    /* Largura máxima da barra de pesquisa */
+}
+
+.search-icon {
+    height: 20px;
+    /* Ajuste conforme necessário */
+    margin-right: 10px;
+    /* Espaço entre o ícone e o campo de texto */
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #6c757d;
+    /* Cor do texto de placeholder */
+    width: 100%;
+    background-color: transparent;
+}
+
+.character-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+.character-header {
+    display: flex;
+    align-items: center;
+    //   justify-content: space-between;
+}
+
+.character-header h1 {
+    font-size: 20px;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.favorite-icon {
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    margin-left: 25px;
+}
+
+.character-description {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 10px;
+    max-width: 600px;
+    z-index: 2;
+    position: relative;
+}
+
+.character-stats {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    z-index: 2;
+    position: relative;
+    // align-items: center;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.stat-item img {
+    height: 24px;
+    width: 24px;
+}
+
+.stat-item span {
+    font-size: 18px;
+    color: #454545;
+    font-weight: 700;
+}
+
+.character-image {
+    position: absolute;
+    right: 70px;
+    top: 30px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.character-image img {
+    width: 300px;
+}
+
+.thumbnail {
+    width: 200px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.comics-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 60px auto 0;
+}
+
+.comics img {
+    width: 100%;
+    max-width: 120px;
+    /* Controla o tamanho máximo da imagem */
+    height: auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.comics p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+    word-break: break-word;
+    /* Quebra a palavra se for muito longa */
+    white-space: normal;
+    /* Permite quebra de linha */
+    overflow-wrap: break-word;
+    /* Quebra a palavra para evitar estouro do contêiner */
+}
+
+.comics img:hover {
+    transform: scale(1.05);
+    /* Efeito ao passar o mouse */
+}
+
+.comics-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 5 colunas */
+    gap: 45px;
+    /* Espaçamento entre os itens */
+    margin-top: 20px;
+}
+
+.rating span {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #454545;
+    font-weight: 700;
+}
+
+.rating .fa {
+    font-size: 18px;
+    color: #DE3323;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.rating .fa.fas {
+    color: #DE3323;
+}
+
+.rating .fa.far {
+    color: lightgray;
+}

@@ -1,0 +1,88 @@
+<div class="header-container">
+    <div class="logo">
+      <img src="../../assets/logo_menor.svg" alt="Marvel Logo" (click)="navigateToHome()"/>
+    </div>
+    <div class="search-bar">
+      <img
+        src="../../assets/ic_busca_menor.svg"
+        alt="Search Icon"
+        class="search-icon"
+      />
+      <input
+      type="text"
+      placeholder="Digite o título do quadrinho"
+      [(ngModel)]="searchTerm"
+      (input)="searchComics()"
+    />
+    
+    </div>
+  </div>
+  
+  <div class="character-container">
+    <div class="character-header">
+      <h1>{{ character.name }}</h1>
+      <span class="favorite-icon">&#10084;</span>
+    </div>
+    <p class="character-description">
+      {{ character.description }}
+    </p>
+    <div class="character-stats">
+      <div>
+        <label>Quadrinhos</label>
+        <div class="stat-item">
+          <img src="../../assets/ic_quadrinhos.svg" alt="Marvel Logo" />
+          <span>{{ character.comics.available }}</span>
+        </div>
+      </div>
+      <div>
+        <label>Filmes</label>
+        <div class="stat-item">
+          <img src="../../assets/ic_trailer.svg" alt="Marvel Logo" />
+          <span>{{ character.series.available }}</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="rating">
+        <span>Rating:</span>
+        <i
+          *ngFor="let star of stars; let i = index"
+          class="fa"
+          [ngClass]="i < rating ? 'fas fa-star' : 'far fa-star'"
+          (click)="rate(i + 1)"
+        ></i>
+      </div>
+  
+      <div class="stat-item">
+        <span>Último quadrinho:</span>
+        <span>{{ character.modified | date : "dd/MM/yyyy" }}</span>
+      </div>
+    </div>
+    <div class="character-image">
+      <img [src]="character.thumbnail.path + '.' + character.thumbnail.extension" alt="{{ character.name }}"/>
+    </div>
+  </div>
+  
+  <div class="comics-container">
+    <h1>Últimos lançamentos</h1>
+  
+    <div class="comics-grid">
+      <div *ngFor="let comic of comics" class="comics">
+        <img
+          [src]="comic.thumbnail.path + '.' + comic.thumbnail.extension"
+          alt="{{ comic.title }}"
+        />
+        <p>{{ comic.title }}</p>
+      </div>
+    </div>
+  
+    <!-- Componente de Paginação -->
+    <app-pagination
+      *ngIf="totalPages > 1"
+      [currentPage]="currentPage"
+      [totalPages]="totalPages"
+      (pageChange)="onPageChange($event)"
+    ></app-pagination>
+  </div>
+  
+  

@@ -1,0 +1,33 @@
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    font-family: Arial, sans-serif;
+  
+    .pagination-button {
+      background-color: #DD3323;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      margin: 0 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+  
+      &:hover:not(:disabled) {
+        background-color: #DD3323;
+      }
+  
+      &:disabled {
+        background-color: #cccccc;
+        cursor: not-allowed;
+      }
+    }
+  
+    .pagination-info {
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+  }
