@@ -44,7 +44,7 @@ export class HeroesComponent implements OnInit {
       .pipe(
         debounceTime(300),
         switchMap((term) => {
-          console.log('Search term inside setupSearchSubscription:', term);  // Adicione este log
+    
           this.offset = (this.currentPage - 1) * this.limit;
           if (term.trim() === '') {
             return this.marvelService.getRecentComics(this.character.id, this.offset, this.limit);
@@ -54,7 +54,7 @@ export class HeroesComponent implements OnInit {
       )
       .subscribe(
         (response) => {
-          console.log('Data received in subscription:', response);  // Adicione este log
+    
           if (response && response.data) {
             this.comics = response.data.results;
           } else {
@@ -71,7 +71,6 @@ export class HeroesComponent implements OnInit {
   }
 
   searchComics(): void {
-    console.log('searchComics called');  // Adicione este log para depuração
     this.searchTerm$.next(this.searchTerm);  // Emite o valor do termo de busca
   }
 

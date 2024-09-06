@@ -38,7 +38,6 @@ export class FavoritesService {
             this.displayModal(errorMessage); // Exibe a mensagem de erro no modal
         } else {
             localStorage.setItem(this.storageKey, JSON.stringify(favorites));
-            console.log(`Favoritos atualizados: ${JSON.stringify(favorites)}`);
         }
     }
     

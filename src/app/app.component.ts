@@ -33,13 +33,10 @@ export class AppComponent implements OnInit {
   }
 
   private checkIfHeroesPage(): void {
-    if (window.location.href.includes('heroes')) {
+    if (window.location.href.includes('heroes') || window.location.href.includes('https://marvel-heroes-angular.vercel.app/heroes')) {
       this.isPageHeroes = true;
-      console.log(this.isPageHeroes);
-      console.log('Pagina Heroes');
     } else {
       this.isPageHeroes = false;
-      console.log(this.isPageHeroes);
     }
   }
 
