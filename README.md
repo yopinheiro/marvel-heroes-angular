@@ -8,7 +8,7 @@ MarvelHeroesAngular is an Angular application that allows users to explore and m
 
 ## Demo
 
-You can view a live demo of the application [here on Vercel](#).
+You can view a live demo of the application [here on Vercel](https://marvel-heroes-angular.vercel.app/).
 
 ## Features
 
