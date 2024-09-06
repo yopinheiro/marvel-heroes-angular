@@ -122,7 +122,7 @@ export class HomeComponent implements OnInit {
 
   openDetailHero(character: CharacterResult): void {
     sessionStorage.setItem('character', JSON.stringify(character));
-    this.router.navigate(['/heroes']);
+    this.router.navigate(['/detail-character']);
   }
 
   closeModal(): void {
